@@ -219,8 +219,8 @@ class Member(models.Model):  # id automatisk...
         Can the member fulfill the transaction
         """
 
-        if self.balance + transaction.change() < 0:
-            return False
+        # if self.balance + transaction.change() < 0:
+        #     return False
         return True
 
         #    def clear_undo_count(self):

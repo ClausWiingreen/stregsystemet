@@ -35,7 +35,7 @@ class SaleAdmin(admin.ModelAdmin):
     get_username.admin_order_field = "member__username"
 
     def get_fullname(self, obj):
-        return f"{obj.member.firstname} {obj.member.lastname}"
+        return "{0} {1}".format(obj.member.firstname, obj.member.lastname)
 
     get_fullname.short_description = "Full name"
     get_fullname.admin_order_field = "member__firstname"
